@@ -2,7 +2,7 @@
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     //retrieve from data
-    $kullanici_adi = $_POST['kullanici_adi'];
+    $username = $_POST['kullanici_adi'];
     $password = $_POST['sifre'];
 }
     //database connection
@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     //validate login authentiction
-    $query = "SELECT * FROM kullanici WHERE kullanici_adi='$kullanici_adi' AND sifre='$password'";
+    $query = "SELECT * FROM kullanici WHERE kullanici_adi='$username' AND sifre='$password'";
     $result = $conn->query($query);
 
     if($result->num_rows ==1 ){
