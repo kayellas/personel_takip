@@ -96,9 +96,34 @@ a{
   transition: .3s;
   cursor: pointer;
 }
+
+/*charts*/
+
+.graphBox
+{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 30px;
+  min-height: 200px;
+}
+.graphBox .box
+{
+  position: relative;
+  background: #12192C;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  border-radius: 20px;
+}
+
 .nav__link:hover{
   background-color: var(--first-color);
 }
+
+
 .nav__icon{
   font-size: 1.25rem;
 }
@@ -116,10 +141,14 @@ a{
   padding: 2rem 0 0 16rem;
 }
 
+
+
+
 /*Active links menu*/
 .active{
   background-color: var(--first-color);
 }
+
 
 /*===== COLLAPSE =====*/
 .collapse{
@@ -149,4 +178,15 @@ a{
 /*Rotate icon*/
 .rotate{
   transform: rotate(180deg);
+}
+
+@media (max-width: 991px)
+{
+  .graphBox
+  {
+    grid-template-columns: 2fr;
+    height: auto;
+
+  }
+
 }
