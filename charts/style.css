@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.pie{
+    margin: 200px auto;
+    width: 600px auto;
+    height: 300px auto;
+}
+
+.donut{
+    margin: 200px auto;
+    width: 600px auto;
+    height: 300px auto;
+}
+
+.bar{
+    margin: 200px auto;
+    width: 600px auto;
+    height: 300px auto;
+}

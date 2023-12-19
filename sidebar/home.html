@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styleadmin.css">
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="bootstrap.css">
+        <link rel="stylesheet" href="fonts.css">
+        <!-- <script src="jquery.js"></script>
+        <script src="bootstrap.js"></script>
+        <script src="bootstrap-tooltip.js"></script>
+        <script src="bootstrap-dropdown.js"></script> -->
+        <link rel="import" href="/charts/donutchart.html">
+        
+        <title>Etad Grup Paneli</title>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load("current", {packages:["corechart"]});
+          google.charts.setOnLoadCallback(drawChart);
+
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Kurs Kategorilendirme', 'Kurs Sayısı'],
+              ['Silahlı Eğitim',     11],
+              ['Silahsız Eğitim',      13],
+              ['İlk Yardım',  5],
+              ['Temel Eğitim', 7],
+              ['Yenileme',    2]
+            ]);
+    
+            var options = {
+              title: 'Kurs Kategorilendirme',
+              is3D: true,
+            };
+    
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+          }
+
+          google.charts.load('upcoming', {'packages': ['vegachart']}).then(drawChart);
+
+        </script>
+    </head>
+    <body id="body-pd">
+        <div class="l-navbar" id="navbar">
+            <nav class="nav">
+                <div>
+                    <div class="nav__brand">
+                        <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                        <a href="#" class="nav__logo">ETAD GRUP</a>
+                    </div>
+                    <div class="nav__list">
+                        <a href="home.html" class="nav__link active">
+                            <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Dashboard</span>
+                        </a>
+                        <div  class="nav__link collapse">
+                            <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Personel</span>
+
+                            <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+
+                            <ul class="collapse__menu">
+                                <a href="#" class="collapse__sublink">Data</a>
+                                <a href="#" class="collapse__sublink">Group</a>
+                                <a href="#" class="collapse__sublink">Members</a>
+                            </ul>
+                        </div>
+
+                        <div  class="nav__link collapse">
+                            <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Eğitmen</span>
+
+                            <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+
+                            <ul class="collapse__menu">
+                                <a href="#" class="collapse__sublink">Data</a>
+                                <a href="#" class="collapse__sublink">Group</a>
+                                <a href="#" class="collapse__sublink">Members</a>
+                            </ul>
+                        </div>
+
+                        <a href="#" class="nav__link">
+                            <ion-icon name="pie-chart-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Kursiyer</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <ion-icon name="pie-chart-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Yeni Kayıt</span>
+                        </a>
+                        
+                       
+                    </div>
+                </div>
+                <a href="login.html" class="nav__link">
+                    <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+        
+        
+        
+        
+        <h1>Dashboard</h1>
+        <!-- ===== IONICONS ===== -->
+        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+        
+        <!-- ===== MAIN JS ===== -->
+        <script src="assets/js/main.js"></script>
+    </body>
+    <body>
+        <div class="container">
+            <div class="header" style="width: 2700px; height: -10px;">
+                <div class="nav">
+                    <div class="search">
+                        <!-- <input type="text" placeholder="Ara.."> -->
+                        <!-- <button type="submit"><img src="search.png" alt=""></button>  -->
+                        <div class="user" >
+                            <div class="img-case" style="width: 50px; height: 50px; position:fixed">
+                                <img src="user.png" alt="" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="content">
+                <div class="cards">
+                    <div class="card">
+                        <div class="box">
+                            <h1>2194</h1>
+                            <h3>Students</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="students (1).png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <h1>2194</h1>
+                            <h3>Students</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="income.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <h1>2194</h1>
+                            <h3>Students</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="income.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <h1>2194</h1>
+                            <h3>Students</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="students (1).png" alt="">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="graphbox">
+                    <h2>Grafikler</h2>
+                    <div id="piechart_3d" class= "pie" style="width: 900px; height: 500px;"></div>                
+                    <br>
+                </div>
+                <div class="content-2">
+                    <div class="recent-payments">
+                        <div class="title">
+                            <h2>Son Ödemeler</h2>
+                            <a href="#" class="btn">Tamamı</a>
+                        </div>
+                       
+                        <table>
+                            <tr>
+                                <th>Adı</th>
+                                <th>Soyadı</th>
+                                <th>Kur Başlangıç Tarihi</th>
+                                <th>Kur Bitiş Tarihi</th>
+                                <th>Tutar</th>
+                            </tr>
+                            <tr>
+                                <td>Ayşe</td>
+                                <td>Aktuğ</td>
+                                <td>05.11.2021</td>
+                                <td>05.11.2021</td>
+                                <td>5000</td>
+                            </tr>
+                            <tr>
+                                <td>Ayşe</td>
+                                <td>Aktuğ</td>
+                                <td>05.11.2021</td>
+                                <td>05.11.2021</td>
+                                <td>5000</td>
+                            </tr>
+                            <tr>
+                                <td>Ayşe</td>
+                                <td>Aktuğ</td>
+                                <td>05.11.2021</td>
+                                <td>05.11.2021</td>
+                                <td>5000</td>
+                            </tr>
+                            <tr>
+                                <td>Ayşe</td>
+                                <td>Aktuğ</td>
+                                <td>05.11.2021</td>
+                                <td>05.11.2021</td>
+                                <td>5000</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="new-students">
+                        <div class="title">
+                            <h2>Yeni Öğrenci</h2>
+                            <a href="#" class="btn">Tamamı</a>
+                        </div>
+                        <Table>
+                            <tr>
+                                <th>Profil</th>
+                                <th>Ad-Soyad</th>
+                                <th>Kur Adı</th>
+                                <th>Kurs Adı</th>
+                            </tr>
+                            <tr>
+                                <td><img src="user.png" alt=""></td>
+                                <td>Zeynep Kaya</td>
+                                <td>1. Kur</td>
+                                <td>Silahlı Eğitim</td>
+                            </tr>
+                            <tr>
+                                <td><img src="user.png" alt=""></td>
+                                <td>Zeynep Kaya</td>
+                                <td>1. Kur</td>
+                                <td>Silahlı Eğitim</td>
+                            </tr>
+                            <tr>
+                                <td><img src="user.png" alt=""></td>
+                                <td>Zeynep Kaya</td>
+                                <td>1. Kur</td>
+                                <td>Silahlı Eğitim</td>
+                            </tr>
+                        </Table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

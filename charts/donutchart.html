@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafik</title>
+    <link rel="stylesheet" href="style.css  ">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Eğitmen Kategorilendirme', 'Sayısı'],
+          ['Silahlı Eğitmen',     11],
+          ['Silahsız Eğitmen',      10],
+          ['Teknik Eğitim Eğitmen',  5],
+          ['İlk Yardım Eğitmen', 7],
+          
+        ]);
+
+        var options = {
+          title: 'Eğitmen Kategorilendirme',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="donutchart" class="donut" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

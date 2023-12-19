@@ -2,8 +2,8 @@
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     //retrieve from data
-    $username = $_POST['kullanici_adi'];
-    $password = $_POST['sifre'];
+    $kullanici_adi = $_POST['kullanici_adi'];
+    $sifre = $_POST['sifre'];
 }
     //database connection
 
@@ -20,23 +20,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     //validate login authentiction
-    $query = "SELECT * FROM kullanici WHERE kullanici_adi='$username' AND sifre='$password'";
+    $query = "SELECT * FROM kullanici WHERE kullanici_adi='$kullanici_adi' AND sifre='$sifre'";
     $result = $conn->query($query);
 
-    if($result->num_rows ==1 ){
+    if($result->num_rows == 1 ){
         //login success
-        header("Location: sidebar/index.html");
+        header("Location:home.html");
     }
     else{
         //login failed
-        header("Location: error.html");
+        header("Location:error.html");
         exit();
     }
     $conn->close();
-
-
-
-
-
 ?>
 
