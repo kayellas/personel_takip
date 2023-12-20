@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Paneli</title>
+    <link rel="stylesheet" href="admin.css">
+
+    <!-- ===== google fonts ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <!-- ===== google material icon ===== -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+
+    <div class="admin-container">
+        <h1>Admin Paneli</h1>
+
+        <div class="form-container">
+            <!-- ===== Yeni Kayıt ===== -->
+            <a href="yenikayit.html"><button id="new-record-btn" onclick="showUserForm()">Yeni Kayıt</button></a>            
+
+            <!-- <h2>Kullanıcı Ekle</h2>
+            <form id="user-form">
+                <label for="username">Kullanıcı Adı:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="role">Rol:</label>
+                <select id="role" name="role" required>
+                    <option value="admin">Admin</option>
+                    <option value="editor">Editor</option>
+                    <option value="user">User</option>
+                </select>
+
+                <button type="submit">Ekle</button>
+            </form> -->
+        </div>
+
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        
+                        <th>ID</th>
+                        <th>İsim</th>
+                        <th>Soyisim</th>
+                        <th>TC Kimlik</th>
+                        <th>Mail</th>
+                        <th>Telefon Numarası</th>
+                        <th>Personel Tipi</th>
+                        <th colspan="2">İşlemler</th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <!-- Tablo içeriği buraya eklenecek -->
+                <tr>
+                    <td>0001</td>
+                    <td>Zeynep</td>
+                    <td>Kaya</td>
+                    <td>2222222222</td>
+                    <td>asdf@gmail.com</td>
+                    <td>9999999</td>
+                    <td>Yönetici</td>
+                    <td>
+                        <a href="#" class="edit" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="edit">&#xE254;</i>
+                        </a>
+                        <a href="#" class="delete" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>0002</td>
+                    <td>Aliye</td>
+                    <td>Yılmaz</td>
+                    <td>4444444444</td>
+                    <td>aliye@gmail.com</td>
+                    <td>7777777</td>
+                    <td>Temizlik</td>
+                    <td>
+                        <a href="#" class="edit" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="edit">&#xE254;</i>
+                        </a>
+                        <a href="#" class="delete" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>0003</td>
+                    <td>Ayşe</td>
+                    <td>Aktuğ</td>
+                    <td>4444444444</td>
+                    <td>aliye@gmail.com</td>
+                    <td>7777777</td>
+                    <td>Eğitmen</td>
+                    <td>
+                        <a href="#" class="edit" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="edit">&#xE254;</i>
+                        </a>
+                        <a href="#" class="delete" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                        </a>
+                    </td>
+                </tr>
+
+                    
+
+                </tbody>
+            </table>
+        </div>
+
+        
+    </div>
+
+    <script src="admin.js"></script>
+
+    <script>
+        function showUserForm() {
+            document.getElementById("user-form").style.display = "block";
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- ===== 
+
+    <div class="admin-container">
+        <h1>Admin Paneli</h1>
+
+        <div class="form-container">
+            <!-=== Yeni Kayıt    <button id="new-record-btn" onclick="showUserForm()">Yeni Kayıt</button>  ===== -->
+         
+            
+            <!-- Kullanıcı Ekleme Formu ->
+            <div id="user-form" style="display: none;">
+                <h2>Yeni Kullanıcı Ekle</h2>
+                <form id="user-form">
+                    <label for="userID">ID:</label>
+                    <input type="text" id="userID" name="userID" required>
+
+                    <label for="userName">İsim:</label>
+                    <input type="text" id="userName" name="userName" required>
+
+                    <label for="userSurname">Soyisim:</label>
+                    <input type="text" id="userSurname" name="userSurname" required>
+
+                    <label for="userTC">TC Kimlik:</label>
+                    <input type="text" id="userTC" name="userTC" required>
+
+                    <label for="userEmail">Email:</label>
+                    <input type="email" id="userEmail" name="userEmail" required>
+
+                    <label for="userPhone">Telefon Numarası:</label>
+                    <input type="tel" id="userPhone" name="userPhone" required>
+
+                    <label for="userRole">Personel Tipi:</label>
+                    <select id="userRole" name="userRole" required>
+                        <option value="admin">Admin</option>
+                        <option value="editor">Editor</option>
+                        <option value="user">User</option>
+                    </select>
+
+                    <button type="button" onclick="addNewUser()">Ekle</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>İsim</th>
+                        <th>Soyisim</th>
+                        <th>TC Kimlik</th>
+                        <th>Mail</th>
+                        <th>Telefon Numarası</th>
+                        <th>Personel Tipi</th>
+                        <th colspan="2">İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-Tablo içeriği buraya eklenecek -->
+                    <!--
+                    <tr>
+                        <td>0001</td>
+                        <td>Zeynep</td>
+                        <td>Kaya</td>
+                        <td>2222222222</td>
+                        <td>asdf@gmail.com</td>
+                        <td>9999999</td>
+                        <td>Yönetici</td>
+                        <td>
+                            <a href="#" class="edit" data-toggle="modal">
+                                <i class="material-icons" data-toggle="tooltip" title="edit">&#xE254;</i>
+                            </a>
+                            <a href="#" class="delete" data-toggle="modal">
+                                <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+
+    <script>
+        function showUserForm() {
+            document.getElementById("user-form").style.display = "block";
+        }
+
+        function addNewUser() {
+            var userID = document.getElementById("userID").value;
+            var userName = document.getElementById("userName").value;
+            var userSurname = document.getElementById("userSurname").value;
+            var userTC = document.getElementById("userTC").value;
+            var userEmail = document.getElementById("userEmail").value;
+            var userPhone = document.getElementById("userPhone").value;
+            var userRole = document.getElementById("userRole").value;
+
+            // Tabloya yeni satır ekleme
+            var table = document.getElementById("userTable").getElementsByTagName('tbody')[0];
+            var newRow = table.insertRow(table.rows.length);
+            var cells = [
+                newRow.insertCell(0),
+                newRow.insertCell(1),
+                newRow.insertCell(2),
+                newRow.insertCell(3),
+                newRow.insertCell(4),
+                newRow.insertCell(5),
+                newRow.insertCell(6),
+                newRow.insertCell(7)
+            ];
+
+            cells[0].innerHTML = userID;
+            cells[1].innerHTML = userName;
+            cells[2].innerHTML = userSurname;
+            cells[3].innerHTML = userTC;
+            cells[4].innerHTML = userEmail;
+            cells[5].innerHTML = userPhone;
+            cells[6].innerHTML = userRole;
+
+            // Diğer gerekli işlemleri burada yapabilirsiniz
+
+            // Formu sıfırlayın
+            document.getElementById("user-form").reset();
+        }
+    </script>
+</body>
+</html>  ===== -->
+ 

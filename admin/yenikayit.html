@@ -1,0 +1,92 @@
+<!-- admin-panel.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Paneli</title>
+    <link rel="stylesheet" href="admin.css">
+
+    <!-- ===== google fonts ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <!-- ===== google material icon ===== -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+        .form-section {
+            display: inline-block;
+            width: 30%; /* Tabloların genişliği, ihtiyaca göre ayarlayabilirsiniz */
+            margin-right: 2%; /* Tablolar arasındaki boşluğu belirler, ihtiyaca göre ayarlayabilirsiniz */
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="panel-container">
+        <div class="form-container">
+            <h1 id="kayit">Yeni Kayıt</h1>
+
+
+            <!-- Kullanıcı Ekleme Formu -->
+            <div>
+                <!-- Kişisel Bilgiler -->
+                <div class="form-section">
+                    <h2>Kayıt Bilgileri</h2>
+                    <label for="firstName">Ad:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+
+                    <label for="lastName">Soyad:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+
+                    <label for="tcKimlik">TC Kimlik:</label>
+                    <input type="text" id="tcKimlik" name="tcKimlik" required>
+                </div>
+
+                <!-- İletişim Bilgileri -->
+                <div class="form-section">
+                    <h2>İletişim Bilgileri</h2>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phoneNumber">Telefon Numarası:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+                    <label for="adress">Adres:</label>
+                    <input type="adress" id="adress" name="adress" required>
+                </div>
+                
+
+                <!-- Rol Bilgileri -->
+                <div class="form-section">
+                    <h2>Kayıt Tipi</h2>
+                    <label for="role">Rol:</label>
+                    <select id="role" name="role" required>
+                        <option value="executive">Yönetici</option>
+                        <option value="instructer">Eğitmen</option>
+                        <option value="cleaner">Temizlik Görevlisi</option>
+                        <option value="security">Güvenlik Görevlisi</option>
+                        <option value="security">Kursiyer</option>
+
+                    </select>
+                </div>
+
+                <button type="submit">Ekle</button>
+            </div>
+        </div>
+
+        <!-- Diğer İçerik -->
+    </div>
+
+    <script src="admin.js"></script>
+
+    <script>
+        function showUserForm() {
+            document.getElementById("user-form").style.display = "block";
+        }
+    </script>
+</body>
+</html>
