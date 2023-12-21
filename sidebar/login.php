@@ -1,5 +1,5 @@
 <?php
-
+echo "dasda";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     //retrieve from data
     $kullanici_adi = $_POST['kullanici_adi'];

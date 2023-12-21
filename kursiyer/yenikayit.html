@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Paneli</title>
-    <link rel="stylesheet" href="admin.css">
+    <title>Kursiyer Paneli</title>
+    <link rel="stylesheet" href="kursiyer.css">
 
     <!-- ===== google fonts ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -28,7 +28,7 @@
 
     <div class="panel-container">
         <div class="form-container">
-            <h1 id="kayit">Yeni Kayıt</h1>
+            <h1 id="kayit">Kursiyer Yeni Kayıt</h1>
 
 
             <!-- Kullanıcı Ekleme Formu -->
@@ -65,11 +65,11 @@
                     <h2>Kayıt Tipi</h2>
                     <label for="role">Rol:</label>
                     <select id="role" name="role" required >
-                        <option value="executive">Yönetici</option>
-                        <option value="instructer">Eğitmen</option>
-                        <option value="cleaner">Temizlik Görevlisi</option>
-                        <option value="security">Güvenlik Görevlisi</option>
-                        <option value="security">Kursiyer</option>
+                        <option value="executive">Silahlı Eğitim Kursu</option>
+                        <option value="instructer">Silahsız Eğitim Kursu</option>
+                        <option value="cleaner">Temel Eğitim Kursu</option>
+                        <option value="security">İlk Yardım Kursu</option>
+                        <option value="security">Afad Kurtarma Kursu</option>
                     </select>
                 </div>
             </div>
@@ -79,7 +79,7 @@
         <!-- Diğer İçerik -->
     </div>
 
-    <script src="admin.js"></script>
+    <script src="kursiyer.js"></script>
 
     <script>
         function showUserForm() {

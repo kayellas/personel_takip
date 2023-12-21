@@ -44,10 +44,17 @@
 
 
         <div class="table-container">
-            <table>
+            <table id="peresonel_tablo" class="table table-striped" style="width:100%">
                 <thead>
+                    <style>
+                        .edit i{
+                            color: green;
+                        }
+                        .delete i{
+                            color:red;
+                        }
+                    </style>
                     <tr>
-                        
                         <th>ID</th>
                         <th>İsim</th>
                         <th>Soyisim</th>
@@ -70,10 +77,10 @@
                     <td>9999999</td>
                     <td>Yönetici</td>
                     <td>
-                        <a href="#" class="edit" data-toggle="modal">
+                        <a href="#" class="edit btn btn-success" data-toggle="modal">
                             <i class="material-icons" data-toggle="tooltip" title="edit">&#xE254;</i>
                         </a>
-                        <a href="#" class="delete" data-toggle="modal">
+                        <a href="#" class="delete btn btn-danger" data-toggle="modal">
                             <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
                         </a>
                     </td>
@@ -112,9 +119,6 @@
                         </a>
                     </td>
                 </tr>
-
-                    
-
                 </tbody>
             </table>
         </div>
