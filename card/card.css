@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Light',sans-serif;
+}
+
+.container{
+    display:flex;
+}
+
+.Card{
+    width: 350px;
+    margin: 24px auto;
+    height: 340px;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    border-radius: 20px;
+    
+}
+.top{
+    padding: 16px;
+    display: flex;
+    justify-content: end;
+    background-color: #6619d9;
+    border-radius: 20px 20px 0 0 ;
+    min-height: 150px;
+}
+.share-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+.picture {
+    position: absolute;
+    width: 148 px;
+    height: 148px;
+    
+    border: 4px solid #6619d9 ;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%,20px);
+}
+.picture img{
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+.share-button-wrapper i {
+    color: white;
+    cursor: pointer;
+}
+.bottom{
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    align-items: center;
+}
+.rate-wrapper{
+    text-align: center;
+}
+
+.title-wrapper{
+    text-align: center;
+}
+.title{
+    font-weight: bold;
+}
+.job{
+    font-size: 14px;
+}
+.action-button-wrapper{
+    justify-content: center;
+    display: flex;
+    column-gap: 16px;
+    margin-top: 13px;
+
+}
+.button{
+    padding: 8px 32px;
+    background-color: #6619d9;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
