@@ -9,7 +9,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $host = "localhost";
     $dbUsername = "root";
-    $dbpassword = "pswrd123";
+    $dbpassword = "";
     $dbName = "personel_takip";
 
 
