@@ -83,7 +83,7 @@ button:hover {
 
 label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
 }
 
 
@@ -103,7 +103,11 @@ label {
 .kayit_tablo{
     display: flex;
     justify-content: space-between; /* Adjust the spacing as needed */
-    width: 90%;
+    align-items: center;
+    flex-direction: column;
+    width: 150%;
+    
+    
 
 }
 .form-section {

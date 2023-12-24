@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Paneli</title>
+    <link rel="stylesheet" href="kurs.css">
+
+    <!-- ===== google fonts ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <!-- ===== google material icon ===== -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+     <!-- ===== CSS ===== -->
+     <link rel="stylesheet" href="assets/css/styles.css">
+     <link rel="stylesheet" href="bootstrap.css">
+     <link rel="stylesheet" href="fonts.css">
+     <link rel="stylesheet" href="../sidebar/assets/css/styles.css  ">
+     <link rel="import" href="/charts/donutchart.html">
+     <script src='https://www.gstatic.com/charts/loader.js'></script>
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+     <script type="text/javascript"></script>
+     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script> 
+
+
+</head>
+<body>
+
+    <!--Sidebar Başlangıcı-->
+        <div class="l-navbar" id="navbar">
+            <nav class="nav">
+                <div>
+                    <div class="nav__brand">
+                        <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                        <a href="../sidebar/home.html" class="nav__logo">ETAD GRUP</a>
+                    </div>
+                    <div class="nav__list">
+                        <div class="sidebar"> <!-- eklendi-->
+               
+    
+                        <a href="../sidebar/home.html" class="nav__link">
+                            <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Dashboard</span>
+                        </a>
+                        
+                        <a href="../admin/panel.html" class="nav__link ">
+                            <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
+                            <span  class="nav__name">Personel</span>
+                        </a>
+
+                        <a href="../egitmen/egitmen.html" class="nav__link">
+                            <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Eğitmen</span>
+                        </a>
+
+                        <a href="../kursiyer/kursiyer.html" class="nav__link">
+                            <ion-icon name="pie-chart-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Kursiyer</span>
+                        </a>
+
+                        <a href="../kurslar/kurs.html" class="nav__link active">
+                            <ion-icon name="pie-chart-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Kurslar</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="../sidebar/login.html" class="nav__link">
+                    <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+     
+        
+        <!-- ===== IONICONS ===== -->
+        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+        
+        <!-- ===== MAIN JS ===== -->
+        <script src="../sidebar/assets/js/main.js"></script>
+
+    <!--Sidebar Bitiş-->
+
+   <!--Kurs Başlangıcı-->
+
+    <div class="admin-container">
+        <h1>Kurs Paneli</h1>
+
+        <div class="form-container">
+             <!--===== Yeni Kayıt =====-->
+            <a href="yenikayit.html"><button id="new-record-btn" onclick="showUserForm()">Yeni Kurs</button></a>            
+        </div> 
+
+
+        <div class="table-container">
+            <table id="peresonel_tablo" class="table table-striped" style="width:100%">
+                <thead>
+                    <style>
+                        .edit i{
+                            color: green;
+                        }
+                        .delete i{
+                            color:red;
+                        }
+                    </style>
+                    <tr>
+                        <th>Kurs ID</th>
+                        <th>Kurs Adı</th>
+                        <th>Kurs Eğitmeni</th>
+                        <th>Kurs Başlangıcı </th>
+                        <th>Kurs Bitişi</th>
+                        <th>Kurs Fİyatı</th>
+                        <th colspan="2">İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Tablo içeriği buraya eklenecek -->
+                <tr>
+                    <td>0001</td>
+                    <td>Silahlı Özel Güvenlik Eğitmi</td>
+                    <td>Barış Aksoy</td>
+                    <td>01.12.2022</td>
+                    <td>01.01.2023</td>
+                    <td>9.999</td>
+                    <td>
+                        <a href="#" class="edit btn btn-success" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="edit">&#xE254;</i>
+                        </a>
+                        <a href="#" class="delete btn btn-danger" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>0002</td>
+                    <td>Silahsız Özel Güvenlik Eğitmi</td>
+                    <td>Deniz Vural</td>
+                    <td>01.01.2023</td>
+                    <td>01.02.2023</td>
+                    <td>10.999</td>
+                    <td>
+                        <a href="#" class="edit" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="edit">&#xE254;</i>
+                        </a>
+                        <a href="#" class="delete" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <<td>0003</td>
+                    <td>Temel İlk Yardım Eğitimi</td>
+                    <td>Işıl Dengil</td>
+                    <td>01.03.2023</td>
+                    <td>01.04.2023</td>
+                    <td>3.999</td>
+                    <td>
+                        <a href="#" class="edit" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="edit">&#xE254;</i>
+                        </a>
+                        <a href="#" class="delete" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        
+    </div>
+
+    <script src="kurs.js"></script>
+
+    <script>
+        function showUserForm() {
+            document.getElementById("user-form").style.display = "block";
+        }
+    </script>
+</body>
+</html>
+   

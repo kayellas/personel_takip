@@ -103,6 +103,7 @@ label {
 .kayit_tablo{
     display: flex;
     justify-content: space-between; /* Adjust the spacing as needed */
+    width: 90%;
 
 }
 .form-section {

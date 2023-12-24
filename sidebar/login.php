@@ -32,6 +32,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         header("Location:error.html");
         exit();
     }
+
+    // Veritabanından veri çek
+    $sql = "SELECT * FROM personel";
+    $result = $conn->query($sql);
+    
+
     $conn->close();
 ?>
 
