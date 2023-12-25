@@ -1,41 +1,4 @@
-<!-- admin-panel.html -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Paneli</title>
-    <link rel="stylesheet" href="admin.css">
-
-    <!-- ===== google fonts ===== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <!-- ===== google material icon ===== -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-     <!-- ===== CSS ===== -->
-     <link rel="stylesheet" href="assets/css/styles.css">
-     <link rel="stylesheet" href="bootstrap.css">
-     <link rel="stylesheet" href="fonts.css">
-     <link rel="stylesheet" href="../sidebar/assets/css/styles.css  ">
-     <link rel="import" href="/charts/donutchart.html">
-     <script src='https://www.gstatic.com/charts/loader.js'></script>
-     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-     <script type="text/javascript"></script>
-     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script> 
-
-    <style>
-        .form-section {
-            display:inline-block;
-            width: 30%; /* Tabloların genişliği, ihtiyaca göre ayarlayabilirsiniz */
-            margin-right: 1%; /* Tablolar arasındaki boşluğu belirler, ihtiyaca göre ayarlayabilirsiniz */
-        }
-    </style>
-
-</head>
-<body>
+<?php include("header.php")?>
 
         <!--Sidebar Başlangıcı-->
             <div class="l-navbar" id="navbar">
@@ -54,22 +17,22 @@
                                 <span class="nav__name">Dashboard</span>
                             </a>
                             
-                            <a href="../admin/panel.html" class="nav__link active">
+                            <a href="../admin/panel.php" class="nav__link active">
                                 <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
                                 <span  class="nav__name">Personel</span>
                             </a>
     
-                            <a href="../egitmen/egitmen.html" class="nav__link">
+                            <a href="../egitmen/egitmen.php" class="nav__link">
                                 <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
                                 <span class="nav__name">Eğitmen</span>
                             </a>
     
-                            <a href="../kursiyer/kursiyer.html" class="nav__link">
+                            <a href="../kursiyer/kursiyer.php" class="nav__link">
                                 <ion-icon name="pie-chart-outline" class="nav__icon"></ion-icon>
                                 <span class="nav__name">Kursiyer</span>
                             </a>
     
-                            <a href="../kurslar/kurs.html" class="nav__link">
+                            <a href="../kurslar/kurs.php" class="nav__link">
                                 <ion-icon name="pie-chart-outline" class="nav__icon"></ion-icon>
                                 <span class="nav__name">Kurslar</span>
                             </a>
@@ -89,9 +52,9 @@
             
             <!-- ===== MAIN JS ===== -->
             <script src="../sidebar/assets/js/main.js"></script>
-    
-        <!--Sidebar Bitiş-->
 
+        <!--Sidebar Bitiş-->
+<form action="#" method="Post">
     <div class="panel-container">
         <div class="form-container">
             <h1 id="kayit">Yeni Kayıt</h1>
@@ -103,26 +66,26 @@
                 <div class="form-section">
                     <h2>Kayıt Bilgileri</h2>
                     <label for="firstName">Ad:</label>
-                    <input type="text" id="firstName" name="firstName" required>
+                    <input type="text" id="personel_ad" name="personel_ad" required>
 
                     <label for="lastName">Soyad:</label>
-                    <input type="text" id="lastName" name="lastName" required>
+                    <input type="text" id="personel_soyad" name="personel_soyad" required>
 
                     <label for="tcKimlik">TC Kimlik:</label>
-                    <input type="text" id="tcKimlik" name="tcKimlik" required>
+                    <input type="text" id="personel_tc" name="personel_tc" required>
                 </div>
 
                 <!-- İletişim Bilgileri -->
                 <div class="form-section">
                     <h2>İletişim Bilgileri</h2>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="personel_mail" name="personel_mail" required>
 
                     <label for="phoneNumber">Telefon Numarası:</label>
-                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                    <input type="tel" id="personel_tel" name="personel_tel" required>
 
-                    <label for="adress">Adres:</label>
-                    <input type="adress" id="adress" name="adress" required>
+                  <!--  <label for="adress">Adres:</label>
+                    <input type="adress" id="personel_adres" name="personel_tur_id" required>-->
                 </div>
                 
 
@@ -130,12 +93,14 @@
                 <div class="form-section">
                     <h2>Kayıt Tipi</h2>
                     <label for="role">Rol:</label>
-                    <select id="role" name="role" required >
-                        <option value="executive">Yönetici</option>
-                        <option value="instructer">Eğitmen</option>
-                        <option value="cleaner">Temizlik Görevlisi</option>
-                        <option value="security">Güvenlik Görevlisi</option>
-                        <option value="security">Kursiyer</option>
+                    <select id="personel_tur_id" name="personel_tur_id" required >
+                        <option value="1">Yönetici</option>
+                        <option value="2">Muhasebe</option>
+                        <option value="3">İnsan Kaynakları</option>
+                        <option value="4">Temizlik Görevlisi</option>
+                        <option value="5">Güvenlik Görevlisi</option>
+                        <option value="6">Eğitmen</option>
+
                     </select>
                 </div>
             </div>
@@ -144,13 +109,37 @@
 
         <!-- Diğer İçerik -->
     </div>
-
+</form>
     <script src="admin.js"></script>
+    <?php
+    $msg="Başarı";
+    $personel_ad=$_POST['personel_ad'];
+    $personel_soyad = $_POST['personel_soyad'];
+    $personel_tc = $_POST['personel_tc'];
+    $personel_mail = $_POST['personel_mail'];
+    $personel_tel = $_POST['personel_tel'];
+    $personel_tur_id = $_POST['personel_tur_id'];
+
+    $conn = new mysqli('localhost','root','','personel_takip');
+    if($conn->connect_error){
+      die('Connection Failed : ' .$conn->connect_error);
+    }else{
+       $stmt = $conn->prepare("insert into personel(personel_ad,personel_soyad,personel_tc,personel_mail,personel_tel,personel_tur_id)
+          values(?,?,?,?,?,?)");
+       $stmt->bind_param("sssssi",$personel_ad,$personel_soyad,$personel_tc,$personel_mail,$personel_tel,$personel_tur_id);
+       $stmt->execute();      
+       $stmt->close();
+       $conn->close();
+    }
+
+    //my other php code here
+        
+    
+?>
 
     <script>
         function showUserForm() {
             document.getElementById("user-form").style.display = "block";
         }
     </script>
-</body>
-</html>
+<?php include("../sidebar/footer.php")?>

@@ -1,12 +1,10 @@
-<!-- admin-panel.html -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurs Paneli</title>
-    <link rel="stylesheet" href="kurs.css">
+    <title>Kursiyer Paneli</title>
+    <link rel="stylesheet" href="kursiyer.css">
 
     <!-- ===== google fonts ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -26,14 +24,6 @@
      <script type="text/javascript"></script>
      <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script> 
 
-    <style>
-        .form-section {
-            display: inline-block;
-            width: 30%; /* Tabloların genişliği, ihtiyaca göre ayarlayabilirsiniz */
-            margin-right: 2%; /* Tablolar arasındaki boşluğu belirler, ihtiyaca göre ayarlayabilirsiniz */
-        }
-    </style>
-
 </head>
 <body>
 
@@ -43,7 +33,7 @@
                     <div>
                         <div class="nav__brand">
                             <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
-                            <a href="#" class="nav__logo">ETAD GRUP</a>
+                            <a href="../sidebar/home.html" class="nav__logo">ETAD GRUP</a>
                         </div>
                         <div class="nav__list">
                             <div class="sidebar"> <!-- eklendi-->
@@ -54,22 +44,22 @@
                                 <span class="nav__name">Dashboard</span>
                             </a>
                             
-                            <a href="../admin/panel.html" class="nav__link">
+                            <a href="../admin/panel.php" class="nav__link">
                                 <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
                                 <span  class="nav__name">Personel</span>
                             </a>
     
-                            <a href="../egitmen/egitmen.html" class="nav__link ">
+                            <a href="../egitmen/egitmen.php" class="nav__link">
                                 <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
                                 <span class="nav__name">Eğitmen</span>
                             </a>
     
-                            <a href="../kursiyer/kursiyer.html" class="nav__link">
+                            <a href="../kursiyer/kursiyer.php" class="nav__link active">
                                 <ion-icon name="pie-chart-outline" class="nav__icon"></ion-icon>
                                 <span class="nav__name">Kursiyer</span>
                             </a>
     
-                            <a href="../kurslar/kurs.html" class="nav__link active">
+                            <a href="../kurslar/kurs.php" class="nav__link">
                                 <ion-icon name="pie-chart-outline" class="nav__icon"></ion-icon>
                                 <span class="nav__name">Kurslar</span>
                             </a>
@@ -83,7 +73,6 @@
             </div>
          
             
-            <h1>Yeni Kurs Ekleme Sayfası</h1>
             <!-- ===== IONICONS ===== -->
             <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
             
@@ -92,36 +81,3 @@
     
         <!--Sidebar Bitiş-->
 
-    <div class="panel-container">
-        <div class="form-container">
-            <h1 id="kayit">Kurs Ekleme </h1>
-
-
-            <!-- Kurs Ekleme Formu -->
-            <div class="kayit_tablo">
-                <!-- Kişisel Bilgiler -->
-                <div class="form-section">
-                    <h2>Kayıt Bilgileri</h2>
-                    <label for="firstName">Kurs Adı:</label>
-                    <input type="text" id="firstName" name="firstName" required>
-
-                    <label for="firstName">Kurs Fiyatı:</label>
-                    <input type="text" id="firstName" name="firstName" required>
-
-                </div>
-            </div>
-            <button type="submit">Ekle</button>
-        </div>
-
-        <!-- Diğer İçerik -->
-    </div>
-
-    <script src="kurs.js"></script>
-
-    <script>
-        function showUserForm() {
-            document.getElementById("user-form").style.display = "block";
-        }
-    </script>
-</body>
-</html>
