@@ -66,19 +66,14 @@
                             <td>".$row["personel_tel"]."</td>
                             <td>".$row["personel_tur_ad"]."</td>
                             <td>
-                                <a href='update'>Güncelle</a>
-                                <a href=;'delete'>Sil</a>
+                            <a href='edit.php?id={$row["personel_id"]}' style=' color:orange'>Düzenle</a>
+                            <a href='delete.php?id={$row["personel_id"]}' style='color:red' onclick=\"return confirm('Silmek istediğinize emin misiniz?');\">Sil</a>
                             </td>
                         </tr>";
                     }
                     ?>
                 </tbody>
             </table>
-        </div>
-
-        <div class="card">
-            <a href="../card/card.html">
-            <button id="new-record-btn" onclick="showUserForm()">KART OLARAK GÖSTER</button></a>            
         </div>
 
         

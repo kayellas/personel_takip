@@ -13,7 +13,7 @@
                             <div class="sidebar"> <!-- eklendi-->
                    
         
-                            <a href="../sidebar/home.html" class="nav__link">
+                            <a href="../sidebar/home.php" class="nav__link">
                                 <ion-icon name="home-outline" class="nav__icon"></ion-icon>
                                 <span class="nav__name">Dashboard</span>
                             </a>

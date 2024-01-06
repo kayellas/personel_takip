@@ -13,7 +13,7 @@
                             <div class="sidebar"> <!-- eklendi-->
                    
         
-                            <a href="../sidebar/home.html" class="nav__link">
+                            <a href="../sidebar/home.php" class="nav__link">
                                 <ion-icon name="home-outline" class="nav__icon"></ion-icon>
                                 <span class="nav__name">Dashboard</span>
                             </a>
@@ -128,7 +128,7 @@
     }else{
        $stmt = $conn->prepare("insert into kursiyer(kursiyer_id,kursiyer_ad,kursiyer_soyad,kursiyer_tc,kursiyer_mail,kursiyer_tel,kurs_ad,kursiyer_odeme)
           values(?,?,?,?,?,?,?,?,?,?)");
-       $stmt->bind_param("issssss",$kursiyer_id,$kursiyer_ad,$kursiyer_soyad,$kursiyer_tc,$kursiyer_mail,$kursiyer_tel,$kurs_ad,$kursiyer_odeme);
+       $stmt->bind_param("isssssss",$kursiyer_id,$kursiyer_ad,$kursiyer_soyad,$kursiyer_tc,$kursiyer_mail,$kursiyer_tel,$kurs_ad,$kursiyer_odeme);
        $stmt->execute();
        echo "registration SUccesfully...";
        $stmt->close();

@@ -69,8 +69,8 @@
                             <td>".$row["personel_tel"]."</td>
                             <td>".$row["personel_tur_id"]."</td>
                             <td>
-                                <a href='edit' style=' color:orange'>Düzenle</a>
-                                <a href='delete' style='color:red '>Sil</a>
+                            <a href='edit.php?id={$row["personel_id"]}' style=' color:orange'>Düzenle</a>
+                            <a href='delete.php?id={$row["personel_id"]}' style='color:red' onclick=\"return confirm('Silmek istediğinize emin misiniz?');\">Sil</a>
                             </td>
                         </tr>";
                     }

@@ -27,6 +27,7 @@
                         <th>Mail</th>
                         <th>Telefon Numarası</th>
                         <th>Kurs Kategorisi</th>
+                        <th>Kurs Ödeme</th>
                         <th colspan="2">İşlemler</th>
                     </tr>
                 </thead>
@@ -61,11 +62,11 @@
                             <td>".$row["kursiyer_tc"]."</td>
                             <td>".$row["kursiyer_mail"]."</td>
                             <td>".$row["kursiyer_tel"]."</td>
-                            <td>".$row["kurs_tur"]."</td>
+                            <td>".$row["kurs_ad"]."</td>
                             <td>".$row["kursiyer_odeme"]."</td>
                             <td>
-                                <a href='update'>Güncelle</a>
-                                <a href=;'delete'>Sil</a>
+                            <a href='edit.php?id={$row["kursiyer_id"]}' style=' color:orange'>Düzenle</a>
+                            <a href='delete.php?id={$row["kursiyer_id"]}' style='color:red' onclick=\"return confirm('Silmek istediğinize emin misiniz?');\">Sil</a>
                             </td>
                         </tr>";
                     }

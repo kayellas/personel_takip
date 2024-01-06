@@ -34,13 +34,13 @@
                 <div>
                     <div class="nav__brand">
                         <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
-                        <a href="../sidebar/home.html" class="nav__logo">ETAD GRUP</a>
+                        <a href="../sidebar/home.php" class="nav__logo">ETAD GRUP</a>
                     </div>
                     <div class="nav__list">
                         <div class="sidebar"> <!-- eklendi-->
                
     
-                        <a href="../sidebar/home.html" class="nav__link">
+                        <a href="../sidebar/home.php" class="nav__link">
                             <ion-icon name="home-outline" class="nav__icon"></ion-icon>
                             <span class="nav__name">Dashboard</span>
                         </a>

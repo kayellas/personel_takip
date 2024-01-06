@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eğitmen Paneli</title>
-    <link rel="stylesheet" href="egitmen.css">
+    <title>Admin Paneli</title>
+    <link rel="stylesheet" href="styleadmin.css">
 
     <!-- ===== google fonts ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -45,12 +45,12 @@
                             <span class="nav__name">Dashboard</span>
                         </a>
                         
-                        <a href="../admin/panel.php" class="nav__link ">
+                        <a href="../admin/panel.php" class="nav__link active">
                             <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
                             <span  class="nav__name">Personel</span>
                         </a>
 
-                        <a href="../egitmen/egitmen.php" class="nav__link active">
+                        <a href="../egitmen/egitmen.php" class="nav__link">
                             <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
                             <span class="nav__name">Eğitmen</span>
                         </a>

@@ -61,8 +61,8 @@
                             <td>".$row["kurs_bitis"]."</td>
                             <td>".$row["kurs_fiyat"]."</td>
                             <td>
-                                <a href='update'>Güncelle</a>
-                                <a href='delete'>Sil</a>
+                            <a href='edit.php?id={$row["personel_id"]}' style=' color:orange'>Düzenle</a>
+                            <a href='delete.php?id={$row["personel_id"]}' style='color:red' onclick=\"return confirm('Silmek istediğinize emin misiniz?');\">Sil</a>
                             </td>
                         </tr>";
                     }
